@@ -3,24 +3,22 @@
 
 using namespace std;
 
+int tot;
+
 void backtracking(string &s, int i) {
-/*  
-  for(int i=0;i<s.size()-1;i++){
-	for(int j=i;j<s.size()-1;j++){
-	  bool valida=false;
-	  for(int h=i; h<=j;h++){
-	    if (s[h] != '1'){
-		valida=true;
+//	cout<<s<<endl;
+	if (i == s.length()) {
+		bool cond=true;
+  		for(int x=0;x<s.length()-2;x++){
+  			if(s[x]==s[x+1] && s[x]==s[x+2]){
+  				cond=false;
+  				break;
+			}
 		}
-	if(valida){
-	  for(int p=i; p<=j;p++){
-		cout << s[p];
+		if(cond){
+			tot++;
 		}
-	}
-	*/
-  if (i == s.size()) {
-    cout << s << endl;
-  } else {
+    }else{
     if (s[i] == '*') {
        s[i] = '0';
        backtracking(s, i+1);
@@ -37,4 +35,5 @@ int main(){
   string s;
   cin >> s;
   backtracking(s, 0);
+  cout<<tot;
 }
