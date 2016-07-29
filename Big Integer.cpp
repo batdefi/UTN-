@@ -2,7 +2,7 @@
 
 using namespace std;
 
-typedef int64_t ll;
+//typedef int64_t ll;
 typedef long long ll;
 typedef pair<ll,ll> lll;
 typedef pair<ll,int> lli;
