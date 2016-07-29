@@ -1,5 +1,6 @@
 # Ignores
 *.exe
+\.git
 \.gitignore
 \.exe
 \.DS_Store
