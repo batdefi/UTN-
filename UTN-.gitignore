@@ -1,5 +1,6 @@
 # Ignores
 *.exe
+\.gitignore
 \.exe
 \.DS_Store
 \.classpath
